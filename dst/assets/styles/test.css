@@ -14,15 +14,13 @@
 .postcss-merge-rules {
   width: 100rem;
   height: 80vmax;
-  font-weight: bold;
+  margin: 0;
+  font-weight: 700;
   overflow: hidden;
 }
 
-.postcss-merge-rules,.postcss-merge-rules-02 {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
+.postcss-merge-rules-02 {
+  margin: 0;
 }
 
 /* ショートハンドの展開 */
@@ -30,26 +28,18 @@
 /* URLの整形 */
 
 .postcss-shorthand-expand-01 {
-  background-color: #555;
-  background-image: url(test.png);
-  background-repeat: repeat;
-  background-position: left center; /* これはうまくいく */
+  background: url(test.png) repeat #555 left center; /* これはうまくいく */
   z-index: 3;
 }
 
 .postcss-shorthand-expand-02 {
-  margin-top: *;
+  width: 48px;
+  height: 10px;
   margin-right: auto;
-  margin-bottom: *;
   margin-left: auto;
-  padding-top: 0;
-  padding-right: 20px;
-  padding-bottom: 2px;
-  padding-left: 3rem;
+  padding: 0 20px 2px 3rem;
   background: url(../images/test-02.png) no-repeat 2rem 3rem; /* ルート相対・相対パスの表記があると展開されない */
   z-index: 7;
-
-  size: 48px 10px;
 }
 
 /* プロパティのソート */
@@ -57,23 +47,9 @@
 .postcss-sorting {
   width: 100%;
   height: 23px;
-  margin-top: 0;
-  margin-right: auto;
-  margin-bottom: 0;
-  margin-left: auto;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-  border-top-style: solid;
-  border-right-style: solid;
-  border-bottom-style: solid;
-  border-left-style: solid;
-  border-top-color: #fab6cc;
-  border-right-color: #fab6cc;
-  border-bottom-color: #fab6cc;
-  border-left-color: #fab6cc;
-  font-weight: bold;
+  margin: 0 auto;
+  border: 1px solid #fab6cc;
+  font-weight: 700;
   text-align: center;
   overflow: hidden;
   z-index: 5;
@@ -83,7 +59,7 @@
 
 .menu_link {
   width: 200px;
-  background-color: #056ef0;
+  background: #056ef0;
 }
 
 .menu {
@@ -99,7 +75,6 @@
 /* プロパティのネスト */
 .postcss-nested{
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
@@ -122,10 +97,8 @@
 
 .autoprefixer {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 1s;
   transition: 1s;
   border-radius: 4px;
   z-index: 1;
@@ -158,10 +131,7 @@
 
 [class^="c-icon__"]::before {
   display: inline-block;
-  margin-top: -.15em;
-  margin-right: .15em;
-  margin-bottom: 0;
-  margin-left: .15em;
+  margin: -.15em .15em 0 .15em;
   background-repeat: no-repeat;
   background-position: 0 0;
   line-height: 0;
@@ -170,10 +140,6 @@
 }
 
 a:-webkit-any-link {
-  color: blue;
-}
-
-a:-moz-any-link {
   color: blue;
 }
 

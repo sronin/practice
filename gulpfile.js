@@ -109,7 +109,7 @@ gulp.task('styles', function () {
         normalizeurl(),
         mergerules(),
         discardempty(),
-        inlinecomments(),
+        inlinecomments({syntax: scss}),
         reporter({clearMessages: true})
       ]))
     .pipe(rename({
