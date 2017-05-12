@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+/* z-indexの整形／ソート */
+
+/* 空指定の削除 */
+
+.postcss-discard-empty-03 {
+  width: 100%;
+  z-index: 6;
+}
+
+/* ルールのマージ */
+
+.postcss-merge-rules {
+  width: 100rem;
+  height: 80vmax;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.postcss-merge-rules,.postcss-merge-rules-02 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+/* ショートハンドの展開 */
+
+/* URLの整形 */
+
+.postcss-shorthand-expand-01 {
+  background-color: #555;
+  background-image: url(test.png);
+  background-repeat: repeat;
+  background-position: left center; /* これはうまくいく */
+  z-index: 3;
+}
+
+.postcss-shorthand-expand-02 {
+  margin-top: *;
+  margin-right: auto;
+  margin-bottom: *;
+  margin-left: auto;
+  padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 2px;
+  padding-left: 3rem;
+  background: url(../images/test-02.png) no-repeat 2rem 3rem; /* ルート相対・相対パスの表記があると展開されない */
+  z-index: 7;
+
+  size: 48px 10px;
+}
+
+/* プロパティのソート */
+
+.postcss-sorting {
+  width: 100%;
+  height: 23px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: #fab6cc;
+  border-right-color: #fab6cc;
+  border-bottom-color: #fab6cc;
+  border-left-color: #fab6cc;
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* 変数 */
+
+.menu_link {
+  width: 200px;
+  background-color: #056ef0;
+}
+
+.menu {
+  width: calc(4 * 200px);
+  margin-top: 10px;
+  z-index: 4;
+}
+
+/* パーシャルインポート */
+.postcss-partial-import{
+  width: 100px;
+}
+/* プロパティのネスト */
+.postcss-nested{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.postcss-nested__nested{
+  font-size: 24rem;
+}
+.postcss-nested__nested:last-child{
+  font-size: 12rem;
+}
+.postcss-nested a{
+  color: #333;
+}
+.postcss-nested a:hover{
+  color: blue;
+  z-index: 2;
+}
+
+/* プレフィックス補完 */
+
+.autoprefixer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.autoprefixer-02 {
+  display: -ms-grid;
+  display: grid;
+}
+
+.aria-selected {
+  background-color: #fbcd33;
+}
+
+.aria-selected[aria-selected="true"] {
+  background-color: #bbcc89;
+}
+
+.block {
+  width: 100%;
+}
+
+.block.block--modifier {
+  width: 80%;
+}
+
+.block.block--modifier .block--modifier__element {
+  width: 50%;
+}
+
+[class^="c-icon__"]::before {
+  display: inline-block;
+  margin-top: -.15em;
+  margin-right: .15em;
+  margin-bottom: 0;
+  margin-left: .15em;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  line-height: 0;
+  content: " ";
+  vertical-align: middle;
+}
+
+a:-webkit-any-link {
+  color: blue;
+}
+
+a:-moz-any-link {
+  color: blue;
+}
+
+a:any-link {
+  color: blue;
+}
+
+/* メディアクエリーのマージとソート */
+
+@media screen and (min-width: 320px){
+
+  .mqpacker,.mqpacker-03{
+    font-weight: 200;
+  }
+}
+
+@media screen and (min-width: 400px){
+
+  .mqpacker{
+    font-size: 2rem;
+  }
+
+  .mqpacker,.mqpacker-02{
+    font-weight: 300;
+  }
+}

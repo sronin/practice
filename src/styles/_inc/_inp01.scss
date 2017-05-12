@@ -1,0 +1,30 @@
+
+.postcss-partial-import {
+  width: 100px;
+}
+
+
+
+/* プロパティのネスト */
+
+.postcss-nested {
+  width: 100%;
+  display: flex;
+
+  &__nested {
+    font-size: 24rem;
+
+    &:last-child {
+      font-size: 12rem;
+    }
+  }
+  & a {
+    color: #333;
+
+    &:hover {
+      color: blue;
+      z-index: 29;
+    }
+  }
+}
+

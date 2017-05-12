@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+
+
+/* z-indexの整形／ソート */
+/* 空指定の削除 */
+
+.postcss-discard-empty-01 {
+  
+}
+.postcss-discard-empty-02 {
+  display: ;
+}
+.postcss-discard-empty-03 {
+  width: 100%;
+  z-index: 2000;
+}
+
+
+
+/* ルールのマージ */
+
+.postcss-merge-rules {
+  width: 100rem;
+  height: 80vmax;
+}
+
+.postcss-merge-rules {
+  margin: 0;
+}
+
+.postcss-merge-rules {
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.postcss-merge-rules-02 {
+  margin: 0;
+}
+
+
+/* ショートハンドの展開 */
+  /* URLの整形 */
+
+.postcss-shorthand-expand-01 {
+  background: url('test.png') repeat #555 left center; /* これはうまくいく */
+  z-index: 33;
+}
+
+.postcss-shorthand-expand-02 {
+  background: url("../images/test-02.png") no-repeat 2rem 3rem; /* ルート相対・相対パスの表記があると展開されない */
+  size: 48px 10px;
+  margin: * auto;
+  z-index: 5000;
+  padding: 0 20px 2px 3rem;
+}
+
+
+
+/* プロパティのソート */
+
+.postcss-sorting {
+  width: 100%;
+  font-weight: bold;
+  margin: 0 auto;
+  z-index: 690;
+  height: 23px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid #FaB6CC;
+}
+
+
+// 一行コメントの削除
+
+
+/* 変数 */
+
+$dir:    top;
+$blue:   #056ef0;
+$column: 200px;
+
+.menu_link {
+    background: $blue;
+    width: $column;
+}
+.menu {
+    width: calc(4 * $column);
+    margin-$(dir): 10px;
+    z-index: 453;
+}
+
+
+
+/* パーシャルインポート */
+
+@import "_inc/inp01";
+
+
+
+/* プレフィックス補完 */
+
+.autoprefixer {
+  display: flex;
+  border-radius: 4px;
+  transition: 1s;
+  z-index: 3;
+}
+.autoprefixer-02 {
+  display: grid;
+}
+
+
+
+.aria-selected {
+  background-color: #Fbcd33;
+
+  &[aria-selected="true"] {
+    background-color: #BBCC89;
+  }
+}
+
+
+
+.block {
+  width: 100%;
+    &.block--modifier {
+      width: 80%;
+        .block--modifier__element {
+          width: 50%;
+        }
+    }
+}
+
+
+
+[class^="c-icon__"]{
+  &::before{
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    content: " ";
+    display: inline-block;
+    line-height: 0;
+    margin: -.15em .15em 0 .15em;
+    vertical-align: middle;
+  }
+}
+
+
+
+a:any-link {
+    color: blue;
+}
+
+
+
+/* メディアクエリーのマージとソート */
+
+@media screen and (min-width: 320px){
+  .mqpacker {
+    font-weight: 200;
+  }
+}
+
+@media screen and (min-width: 400px){
+  .mqpacker {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 320px){
+  .mqpacker-03 {
+    font-weight: 200;
+  }
+}
+
+@media screen and (min-width: 400px){
+  .mqpacker-02 {
+    font-weight: 300;
+  }
+}

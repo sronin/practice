@@ -1,8 +1,9 @@
-# githubとsourcetreeを理解する
+# githubとgitを使う
 - githubを使う
-- sourcetreeを使う
+- gitを使う
 
-あまり間を置かず何かしていないと恐らく忘れてしまうので。  
-少しずつ頭に馴染みますように。  
-  
-まず作業前のフェッチ？  
+##その他に環境構築をしてみる
+- node
+- npm
+- gulp
+- pluginなど
