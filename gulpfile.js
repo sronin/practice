@@ -98,7 +98,7 @@ gulp.task('styles', function () {
         }),
         partialimport({extension: '.scss'}),
         mqpacker(),
-        autoprefixer({browsers: ['> 2%', 'last 3 version']}),
+        autoprefixer({browsers: ['> 2%', 'last 4 version']}),
         zindex(),
         vars(),
         mixins(),
